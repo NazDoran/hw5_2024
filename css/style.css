@@ -1,0 +1,208 @@
+@keyframes fadeIn {
+    from {
+        width: 25px;
+        opacity: 0;
+    }
+    to {
+        width: 475px;
+        opacity: 1;
+    }
+}
+#logo{
+    animation-name: fadeIn;
+    animation-duration: 5s;
+}
+body{
+    background-image: url(../images/concrete_seamless.png);
+    background-color: #f1f1f1;
+    font-family: poppins, serif;
+    text-align: center;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* header #logo {
+    margin-left: auto;
+    margin-right: auto;
+} */
+/* .nav_links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.nav_links a:visited{
+    color: #50C7C7;
+    text-decoration: underline;
+    -webkit-text-decoration-style: dotted;
+            text-decoration-style: dotted;
+}
+.card > header{
+    background-color: #288088;
+    padding: 20px 0;
+    border-radius: 50px 50px 0 0;
+}
+.card{
+    display: flex;
+    width: 450px;
+    flex-direction: column;
+    border: solid 2px #45adad;
+    border-radius: 50px 50px 0 0;
+}
+.pricing{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.gallery img {
+    border: 10px solid #50C7C7;
+    margin: 10px;
+    width: 300px;
+  }
+.gallery {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+  }
+
+.card > header{
+    position: static;
+    background-color: #288088;
+    padding: 20px 0;
+    border-radius: 50px 50px 0 0;
+    justify-content: center;
+}
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+  @media only screen and (min-width: 900px) {
+    body {
+        text-align:left;
+    }
+    header {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: auto;
+        flex-direction: row;
+        justify-content: space-between;
+        /* align-items: center; */
+        /* z-index:1000; */
+    }
+    li > header{
+        position:static;
+        padding: 20px 0;
+        border-radius: 50px 50px 0 0;
+    }
+    .pricing {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: flex-start;
+        align-items: flex-start;
+        margin: auto;
+    }
+    .card {
+        flex-basis: 275px;
+        display: flex;
+        flex-direction: column;
+        border: solid 2px #45adad;
+        border-radius: 50px 50px 0 0;
+    }
+    .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .card > header{
+        justify-content:flex-start;
+    }
+    /* .card{
+        display: flex;
+        flex-basis: 450px;
+        flex-direction: row;
+    }
+    .pricing{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    } */
+
+}
+@media print {
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background-image: none;
+    }
+    .gallery, #gallery {
+      display: none;
+    }
+    .pricing {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: flex-end;
+      margin-bottom: 300px;
+    }
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        /* flex-basis: 325px; */
+    }
+    .card {
+        flex: 1;
+        border: 2px solid #45ADDD;
+        justify-content: stretch;
+        align-items: center;
+        width: 325px;
+        }
+    header .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 150px;
+    }
+    /* header .nav_links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .card {
+        display: flex;
+        flex-direction: row;
+        border: 2px solid #45ADDD;
+        width: 325px;
+    }
+    .card > header {
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+    } */
+    .card ul :nth-child(2)::after {
+      content: "\1F44D";
+      color: #000;
+      font-size: 1.2em;
+      margin-right: 0.5em;
+    }
+  }
